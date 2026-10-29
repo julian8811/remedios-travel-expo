@@ -8,6 +8,13 @@
     "test": "node --test tests/*.test.js",
     "start": "node scripts/serve.mjs"
   },
-  "dependencies": { "@supabase/supabase-js": "2.118.0" },
-  "engines": { "node": ">=24" }
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
 }
