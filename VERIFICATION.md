@@ -34,4 +34,12 @@ Tras iniciar sesión, el dashboard mostró únicamente «montoya8811@gmail.com's
 
 La revisión visual final confirmó el diseño de la información general y los estilos de marca tras corregir la caché con archivos cuyo nombre incluye la huella de su contenido. El despliegue con esa corrección pasó compilación y pruebas en GitHub Actions.
 
+## Vercel
+
+Producción: https://remedios-travel-expo.vercel.app/ · Proyecto `remedios-travel-expo` del equipo `montoya8811-1146s-projects`. El despliegue de producción quedó READY y el dominio público respondió HTTP 200 sin autenticación. El repositorio GitHub quedó conectado al proyecto Vercel.
+
+La función Supabase `submit` se actualizó para admitir exclusivamente el nuevo origen de producción además de GitHub Pages y desarrollo local. `SMOKE_ORIGIN=https://remedios-travel-expo.vercel.app node scripts/smoke.mjs` aprobó preflight CORS, seis envíos con tres UUID estables, las cuatro denegaciones de lectura pública, inserción directa denegada, resumen privado denegado y rechazo de datos inválidos. Los tres registros sintéticos fueron retirados después.
+
+El acceso administrativo y los correos continúan pendientes, tal como se acordó; este despliegue no los activa.
+
 El asesor de seguridad informó únicamente que `rate_limits` tiene RLS sin políticas públicas: es un cierre deliberado, con permisos exclusivos del servicio. No habilitar una política pública para quitar ese aviso informativo.

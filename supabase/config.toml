@@ -2,7 +2,7 @@ project_id = "remedios-travel-expo"
 
 [auth]
 site_url = "https://julian8811.github.io/remedios-travel-expo/"
-additional_redirect_urls = ["http://127.0.0.1:4173/", "http://localhost:4173/"]
+additional_redirect_urls = ["https://remedios-travel-expo.vercel.app/", "http://127.0.0.1:4173/", "http://localhost:4173/"]
 
 [functions.submit]
 verify_jwt = false

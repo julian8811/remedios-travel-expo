@@ -2,7 +2,11 @@
 import assert from 'node:assert/strict';
 import { config } from '../public/config.js';
 import { colombiaDay } from '../public/shared/validation.js';
-const headers = { 'Content-Type':'application/json', apikey:config.key, Origin:'https://julian8811.github.io' };
+const origin = process.env.SMOKE_ORIGIN || 'https://julian8811.github.io';
+const headers = { 'Content-Type':'application/json', apikey:config.key, Origin:origin };
+const preflight = await fetch(config.url+'/functions/v1/submit',{method:'OPTIONS',headers:{Origin:origin,'Access-Control-Request-Method':'POST','Access-Control-Request-Headers':'content-type,apikey'}});
+assert.equal(preflight.status,204);
+assert.equal(preflight.headers.get('access-control-allow-origin'),origin);
 const fixtures = [
   ['A',{exp:'PRUEBA TÉCNICA · eliminar',idea:'Registro sintético de verificación'}],
   ['B',{empresa:'PRUEBA TÉCNICA · eliminar',tipo:'Agencia de viajes',interes:4,paso:'Enviar portafolio'}],

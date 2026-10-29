@@ -1,7 +1,7 @@
 import { createClient } from 'npm:@supabase/supabase-js@2.118.0';
 import { validateRecord } from '../../../public/shared/validation.js';
 
-const allowedOrigins = new Set(['https://julian8811.github.io','http://127.0.0.1:4173','http://localhost:4173']);
+const allowedOrigins = new Set(['https://julian8811.github.io','https://remedios-travel-expo.vercel.app','http://127.0.0.1:4173','http://localhost:4173']);
 const url = Deno.env.get('SUPABASE_URL')!;
 const key = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const db = createClient(url,key,{auth:{persistSession:false}});

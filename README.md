@@ -3,6 +3,7 @@
 Aplicación de captura pública para la delegación de Remedios. Conserva los tres cuestionarios del HTML original: A (stands), B (compradores y aliados) y C (percepción del destino). Los resultados y contactos requieren acceso administrativo.
 
 - Web: https://julian8811.github.io/remedios-travel-expo/
+- Vercel: https://remedios-travel-expo.vercel.app/
 - Coordinación y destinatario del resumen: jose.gomez.lopez@colmayor.edu.co
 - Proyecto Supabase: `wfwxdvkcdqnvdmkjxaoj`, organización Julián, región us-east-1.
 
@@ -21,6 +22,8 @@ Abrir http://127.0.0.1:4173. GitHub Actions verifica y publica `dist/` en Pages 
 
 La compilación agrupa JavaScript con esbuild y publica JavaScript y CSS con nombres derivados de su contenido para evitar mezclar versiones antiguas del navegador con el HTML actualizado.
 
+Vercel está conectado al mismo repositorio GitHub, con despliegue de producción desde `main`. `vercel.json` define la instalación reproducible, ejecución de pruebas y salida `dist/`. Supabase acepta envíos únicamente desde los orígenes publicados autorizados y el desarrollo local. Los dominios temporales de previews no se autorizan automáticamente para recoger información real.
+
 ## Captura y datos
 
 Antes de las preguntas se recoge nombre del registrador, fecha y tipo de formulario, con autorización. Los demás campos se conservan en sus formularios. Se agrega autorización al contacto opcional de A. B requiere autorización para guardar nombre, cargo, teléfono o correo; C no solicita identificación personal.
@@ -38,7 +41,7 @@ El único administrador inicial es el propietario confirmado del correo `jose.go
 En Supabase → Authentication → URL Configuration, establecer:
 
 - Site URL: `https://julian8811.github.io/remedios-travel-expo/`
-- Redirect URLs: la misma URL y, para desarrollo, `http://127.0.0.1:4173/`.
+- Redirect URLs: la misma URL, `https://remedios-travel-expo.vercel.app/` y, para desarrollo, `http://127.0.0.1:4173/`.
 
 El acceso solicita un enlace de correo. Configurar SMTP de producción en Supabase Auth; el servicio de prueba de Supabase puede restringir destinatarios. Se puede utilizar Resend SMTP con un dominio verificado. No se crea ni envía ninguna invitación desde las migraciones.
 
