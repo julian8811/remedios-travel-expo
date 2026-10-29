@@ -1,0 +1,13 @@
+{
+  "name": "remedios-travel-expo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.js",
+    "start": "node scripts/serve.mjs"
+  },
+  "dependencies": { "@supabase/supabase-js": "2.118.0" },
+  "engines": { "node": ">=24" }
+}
