@@ -30,4 +30,8 @@ El envío real de Resend y el acceso administrativo mediante correo requieren cl
 
 El dashboard abierto solicita iniciar sesión; no se modificó su configuración sin acceso. La revisión visual se realizó en escritorio. El navegador no aplicó la dimensión móvil solicitada, por lo que no se declara una revisión visual móvil completada.
 
+Tras iniciar sesión, el dashboard mostró únicamente «montoya8811@gmail.com's Org» y redirigió el proyecto Remedios a la lista de organizaciones: esa cuenta no muestra acceso a «Julián». Se solicitó abrir el proyecto con una cuenta miembro de la organización elegida. La captura pública funciona independientemente de este ajuste administrativo pendiente.
+
+La revisión visual final confirmó el diseño de la información general y los estilos de marca tras corregir la caché con archivos cuyo nombre incluye la huella de su contenido. El despliegue con esa corrección pasó compilación y pruebas en GitHub Actions.
+
 El asesor de seguridad informó únicamente que `rate_limits` tiene RLS sin políticas públicas: es un cierre deliberado, con permisos exclusivos del servicio. No habilitar una política pública para quitar ese aviso informativo.

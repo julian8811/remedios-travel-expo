@@ -19,6 +19,8 @@ npm start
 
 Abrir http://127.0.0.1:4173. GitHub Actions verifica y publica `dist/` en Pages tras cada push a `main`. `public/config.js` contiene únicamente URL y clave publicable; esta clave no autoriza leer respuestas. Nunca poner claves privilegiadas ni secretos de correo en el frontend o GitHub.
 
+La compilación agrupa JavaScript con esbuild y publica JavaScript y CSS con nombres derivados de su contenido para evitar mezclar versiones antiguas del navegador con el HTML actualizado.
+
 ## Captura y datos
 
 Antes de las preguntas se recoge nombre del registrador, fecha y tipo de formulario, con autorización. Los demás campos se conservan en sus formularios. Se agrega autorización al contacto opcional de A. B requiere autorización para guardar nombre, cargo, teléfono o correo; C no solicita identificación personal.
